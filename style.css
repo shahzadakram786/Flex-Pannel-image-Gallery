@@ -1,0 +1,80 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 20px;
+}
+
+body{
+    background-color: rgb(48, 162, 162);
+}
+
+.panels{
+    min-height: 100vh;
+    height: auto;
+    overflow: hidden;
+    display: flex;
+}
+
+.panel {
+    background-color: purple;
+    box-shadow: inset 0px 0px 0.5px;
+    color: white;
+    text-align: center;
+    flex: 1; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+   
+
+}
+.panel > *{
+    margin: 0;
+    width: 100%;
+    border: 2px solid rgb(255, 0, 0);
+    flex: 1 0 auto;
+    display: flex;
+    align-items: center;
+justify-content: center;
+transition: transform 0.5s;
+}
+
+.panel > *:first-child { transform: translateY(-100%);}
+.panel.open-active  > *:first-child { transform: translateY(0%);}
+
+.panel > *:last-child { transform: translateY(100%);}
+.panel.open-active  > *:last-child { transform: translateY(0%);}
+
+
+
+.panel.open {
+    flex: 5;
+    font-size: 40px ;
+}
+
+.panel1{
+    background-image: url(./images/1.jpg);
+    background-size: cover;
+
+}
+
+.panel2{
+    background-image: url(./images/2.jpg);
+    background-size: cover;
+    /* background-repeat: no-repeat; */
+    
+}
+.panel3{
+    background-image: url(./images/3.jpg);
+    background-size: cover;
+}
+.panel4{
+    background-image: url(./images/4.jpg);
+    background-size: cover;
+}
+
+.panel5{
+    background-image: url(./images/5.jpg);
+    background-size: cover;
+}
