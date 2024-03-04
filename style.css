@@ -26,13 +26,16 @@ body{
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    transition: font-size 0.7s cubic-bezier(0.075, 0.82, 0.165, 1)
+    ,flex 0.7 cubic-bezier(0.175, 0.885, 0.32, 1.275),
+     /* background 0.2s ; */
    
 
 }
 .panel > *{
     margin: 0;
     width: 100%;
-    border: 2px solid rgb(255, 0, 0);
+    /* border: 2px solid yellow; */
     flex: 1 0 auto;
     display: flex;
     align-items: center;
@@ -46,12 +49,24 @@ transition: transform 0.5s;
 .panel > *:last-child { transform: translateY(100%);}
 .panel.open-active  > *:last-child { transform: translateY(0%);}
 
+.panel p {
+    text-transform: uppercase;
+    font-family:'Amatic SC',cursive;
+    text-shadow:  0 0 4px white;
+    font-size: 2em;
 
+}
 
 .panel.open {
     flex: 5;
     font-size: 40px ;
 }
+
+
+.panel p:nth-child(2){
+    font-size: 4em;
+}
+
 
 .panel1{
     background-image: url(./images/1.jpg);
